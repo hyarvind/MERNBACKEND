@@ -1,0 +1,14 @@
+h1 {
+    color: rgb(219, 72, 36);
+}
+.post {
+    background-color: blanchedalmond;
+
+}
+.user {
+    font-style: italic;
+}
+.button{
+    text-decoration: none;
+    color: rgb(221, 47, 183);
+}

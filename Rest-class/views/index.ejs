@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Quera Posts</h1>
+    
+    <% if (posts.length === 0) { %>
+        <p>No posts yet! <a href="/posts/new">Create your first post</a></p>
+    <% } else { %>
+        <% posts.forEach((post) => { %>
+            <div class="post">
+                <h3 class="user">@<%= post.username %></h3>
+                <h4 class="content"><%= post.content %></h4>
+                <br>
+                <!-- Corrected link to view post details -->
+                <a href="/posts/<%= post.id %>">See in details</a>
+            </div>
+        <% }); %>
+    <% } %>
+
+    <a href="/posts/new">Create a new post</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+// const express =require('express');   /// require express
+// const app =express();  
+// // console.dir(app);
+// let port =5000;
+// app.listen(port,() => {                      //// listen create on web server
+//       console.log(`app is listening on port ${port}`);
+      
+// })
+// // app.use((req,res,next) => {
+// //       console.log("request received");   
+// // });
+// app.use((req, res, next) => {
+//       console.log("Request received");
+//       next();  // Pass control to the next middleware or route handler
+//   });
+//   /**
+//    * https://github.com/hoppscotch/hoppscotch/discussions/2051 /// to add extensitions
+//    * 
+//    * output
+//    * 
+//    * Node.js v20.17.0
+// PS C:\Users\ARVIND\Desktop\JAVASCRIPTSPAIDCOURSES\backendnode\expressdir> node index.js     
+// app is listening on port 4000
+// Request received
+//    */

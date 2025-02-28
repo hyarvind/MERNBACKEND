@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        h1  {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Follower</th>
+                <th>Edit Username</th>
+                <th>Delete user</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(user => { %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.username %></td>
+                    <td><%= user.password %></td>
+                    <td><%= user.follower %></td>
+                    <td>
+                        <!-- Edit Form -->
+                        <form method="get" action="/edit/<%= user.id %>/edit">
+                            <button type="submit">Edit Username</button>
+                        </form>
+                    </td>
+                    <td>
+                         <!-- Delete Form -->
+                         <form method="get" action="/delete/<%= user.id %>/delete">
+                            <button type="submit">Delete User</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
